@@ -1,0 +1,14 @@
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25.53 23.9">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #000000; /* Cambia el color a negro */
+      }
+    </style>
+  </defs>
+  <g id="Layer_2-2" data-name="Layer 2">
+    <g id="layer1">
+      <path id="path1009" class="cls-1" d="M.06,0L9.92,13.18,0,23.9H2.23L10.92,14.51l7.02,9.38h7.6L15.12,9.98,24.35,0h-2.23l-8,8.64L7.66,0H.06ZM3.35,1.64h3.49l15.41,20.61h-3.49L3.35,1.64Z"/>
+    </g>
+  </g>
+</svg>
