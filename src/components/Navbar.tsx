@@ -22,8 +22,8 @@ const Navbar = () => {
                     <li className={styles.navItem} onClick={() => handleClick('')}>PROTOCOL</li>
                 </ul>
                 <div className={styles.actions}>
-                    <button className={styles.button} onClick={() => handleClick('https://veterans-whitepaper.gitbook.io/veterans')}>WHITEPAPER</button>
-                    <button className={styles.button}>COMING SOON...</button>
+                    <button className={styles.button} onClick={() => handleClick('https://veterans-whitepaper.gitbook.io/veterans')}><a>WHITEPAPER</a></button>
+                    <button className={styles.button}><a>COMING SOON...</a></button>
                 </div>
 
             </nav>

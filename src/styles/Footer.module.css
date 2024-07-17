@@ -1,0 +1,83 @@
+.footer {
+
+    text-align: center;
+    padding: 20px 0;
+    border-top: 2px solid black;
+    /* Línea negra en la parte superior */
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 10px;
+
+}
+
+.iconX {
+    border: 1px solid black;
+    border-radius: 5px;
+    border-bottom-width: 6px;
+    border-right-width: 5px;
+    padding: 3px;
+    background-color: #FBBF31;
+}
+
+.iconDiscord {
+    border: 1px solid black;
+    border-radius: 5px;
+    border-bottom-width: 6px;
+    border-right-width: 5px;
+    padding: 3px;
+    background-color: #FBBF31;
+}
+
+.iconExchangeArt {
+    border: 1px solid black;
+    border-radius: 5px;
+    border-bottom-width: 6px;
+    border-right-width: 5px;
+    padding: 3px;
+    background-color: #FBBF31;
+}
+
+.iconAtlas {
+    border: 1px solid black;
+    border-radius: 5px;
+    border-bottom-width: 6px;
+    border-right-width: 5px;
+    padding: 3px;
+    background-color: #FBBF31;
+}
+
+.links {
+    font-family: 'MonumentExtended', sans-serif;
+    margin-bottom: 10px;
+}
+
+.links a {
+    text-decoration: none;
+    color: black;
+    margin: 0 5px;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+
+.copyright {
+    font-family: 'MonumentExtended', sans-serif;
+    font-size: 14px;
+}
+
+.vector9 {
+    margin-top: 12px;
+    position: absolute;
+    z-index: -1;
+    height: 0.5%;
+}
+
+.logo {
+    margin-left: 50%;
+    margin-bottom: 1%;
+}

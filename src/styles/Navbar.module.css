@@ -6,12 +6,12 @@
 .navbar {
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: baseline;
     padding: 0px 20px;
     padding-bottom: 20px;
     font-family: 'MonumentExtended', sans-serif;
     font-weight: 800;
-    border-bottom-width: 4px;
+    border-bottom-width: 2px;
     border-color: black;
     border-style: solid;
 }
@@ -25,7 +25,7 @@
     display: flex;
     list-style: none;
     margin: 0;
-    margin-left: 100px;
+    margin-left: 365px;
     padding: 0;
     cursor: pointer;
     position: relative;
@@ -100,10 +100,9 @@
     border: 3px solid black;
     border-bottom-width: 6px;
     border-right-width: 5px;
-    padding: 5px 10px;
+    padding: 5px 5px;
     margin-left: 10px;
     margin-top: 15px;
-    font-weight: bold;
     cursor: pointer;
 }
 
