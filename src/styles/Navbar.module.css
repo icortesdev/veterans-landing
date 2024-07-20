@@ -31,6 +31,8 @@
     position: relative;
 }
 
+
+
 .navLinks::before {
     content: '';
     height: 35px;
@@ -48,6 +50,10 @@
     position: relative;
     cursor: pointer;
 
+}
+
+.navItem:hover {
+    color: #D9D9D9;
 }
 
 .navItem::after {

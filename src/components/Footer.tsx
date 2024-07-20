@@ -1,37 +1,64 @@
-import React from 'react'
+import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import styles from '../styles/Footer.module.css'
+import styles from '../styles/Footer.module.css';
 
-const Footer = () => {
+const socialLinks = [
+    { src: "/images/Icono_X.svg", alt: "X", url: "https://twitter.com/veterans_crew", width: 30, height: 30 },
+    { src: "/images/Icono_Discor.svg", alt: "Discord", url: "https://discord.com/invite/veterans", width: 30, height: 30 },
+    { src: "/images/Icono_Exchange Art.svg", alt: "ExchangeArt", url: "https://exchange.art/veterans/nfts", width: 30, height: 30 },
+    { src: "/images/Icono_Atlas.svg", alt: "Atlas", url: "https://atlas3.io/project/veterans", width: 30, height: 25 }
+];
 
-    const handleRedirect = (url: string) => {
-        const newWindow = window.open(url, '_blank');
-        if (newWindow) newWindow.opener = null;
-    };
+const handleRedirect = (url: string) => {
+    const newWindow = window.open(url, '_blank');
+    if (newWindow) newWindow.opener = null;
+};
 
-    return (
-        <>
+const SocialIcons = () => (
+    <div className={styles.icons}>
+        {socialLinks.map((link, index) => (
+            <Image
+                key={index}
+                className={styles[`icon${link.alt}`]}
+                onClick={() => handleRedirect(link.url)}
+                src={link.src}
+                alt={link.alt}
+                width={link.width}
+                height={link.height}
+            />
+        ))}
+    </div>
+);
 
-            <footer className={styles.footer}>
-                <Image className={styles.vector9} src="/images/Vector 9.png" alt="margen" width={100000} height={900} />
-                <div className={styles.icons}>
+const FooterLinks = () => (
+    <div className={styles.links}>
+        <Link href="/">HOME</Link> / <Link href="/linking">LINKING</Link> / <Link href="/inventory">INVENTORY</Link>
+    </div>
+);
 
-                    <Image className={styles.iconX} src="/images/Icono_X.svg" alt="X" width={30} height={30} />
-                    <Image className={styles.iconDiscord} src="/images/Icono_Discor.svg" alt="Discord" width={30} height={30} />
-                    <Image className={styles.iconExchangeArt} src="/images/Icono_Exchange Art.svg" alt="ExchangeArt" width={30} height={30} />
-                    <Image className={styles.iconAtlas} src="/images/Icono_Atlas.svg" alt="Atlas" width={30} height={25} />
-                </div>
-                <div className={styles.links}>
-                    <a href="/">HOME</a> / <a href="/linking">LINKING</a> / <a href="/inventory">INVENTORY</a>
-                </div>
-                <div className={styles.copyright}>
-                    <Image className={styles.logo} src="/images/Isotipo_Negro.svg" alt="X" width={25} height={30} />
-                    <p>&copy; 2023 Veterans. All rights reserved.</p>
-                </div>
-            </footer>
-        </>
-    )
-}
+const Footer = () => (
+    <footer className={styles.footer}>
+        <Image
+            className={styles.vector9}
+            src="/images/Vector 9.png"
+            alt="margen"
+            width={100000}
+            height={900}
+        />
+        <SocialIcons />
+        <FooterLinks />
+        <div className={styles.copyright}>
+            <Image
+                className={styles.logo}
+                src="/images/Isotipo_Negro.svg"
+                alt="X"
+                width={25}
+                height={30}
+            />
+            <p>&copy; 2023 Veterans. All rights reserved.</p>
+        </div>
+    </footer>
+);
 
-export default Footer
+export default Footer;

@@ -1,34 +1,56 @@
-import React from 'react'
-import styles from '../styles/Navbar.module.css'
+import React from 'react';
+import styles from '../styles/Navbar.module.css';
 import Link from 'next/link';
 import Image from 'next/image';
 
-
 const Navbar = () => {
-
-    const handleClick = (url: string) => {
-        window.open(url, '_blank');
-    }
-
     return (
-        <>
-            <nav className={styles.navbar}>
-                <div className={styles.logo}><Link href="/">
-                    <Image src="/images/Isotipo_Negro.svg" alt="logo" width={37} height={31} priority />
-                </Link></div>
-                <ul className={styles.navLinks}>
-                    <li className={styles.navItem} onClick={() => handleClick('https://veterans-tools.solsuite.io/staking')}>STAKING</li>
+        <nav className={styles.navbar}>
+            <Logo />
+            <NavLinks />
+            <Actions />
+        </nav>
+    );
+};
 
-                    <li className={styles.navItem} onClick={() => handleClick('')}>PROTOCOL</li>
-                </ul>
-                <div className={styles.actions}>
-                    <button className={styles.button} onClick={() => handleClick('https://veterans-whitepaper.gitbook.io/veterans')}><a>WHITEPAPER</a></button>
-                    <button className={styles.button}><a>COMING SOON...</a></button>
-                </div>
+const Logo = () => (
+    <div className={styles.logo}>
+        <Link href="/">
+            <Image
+                src="/images/Isotipo_Negro.svg"
+                alt="logo"
+                width={37}
+                height={31}
+                priority
+            />
+        </Link>
+    </div>
+);
 
-            </nav>
-        </>
-    )
-}
+const NavLinks = () => (
+    <ul className={styles.navLinks}>
+        <NavItem url="https://veterans-tools.solsuite.io/staking" label="STAKING" />
+        <NavItem url="" label="PROTOCOL" />
+    </ul>
+);
 
-export default Navbar
+const NavItem = ({ url, label }: { url: string, label: string }) => (
+    <li className={styles.navItem} onClick={() => window.open(url, '_blank')}>
+        {label}
+    </li>
+);
+
+const Actions = () => (
+    <div className={styles.actions}>
+        <ActionButton url="https://veterans-whitepaper.gitbook.io/veterans" label="WHITEPAPER" />
+        <ActionButton url="#" label="COMING SOON..." />
+    </div>
+);
+
+const ActionButton = ({ url, label }: { url: string, label: string }) => (
+    <button className={styles.button} onClick={() => window.open(url, '_blank')}>
+        <a>{label}</a>
+    </button>
+);
+
+export default Navbar;

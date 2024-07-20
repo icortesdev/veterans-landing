@@ -21,6 +21,11 @@
     border-right-width: 5px;
     padding: 3px;
     background-color: #FBBF31;
+    cursor: pointer;
+}
+
+.iconX:hover {
+    background-color: #D9D9D9;
 }
 
 .iconDiscord {
@@ -30,6 +35,11 @@
     border-right-width: 5px;
     padding: 3px;
     background-color: #FBBF31;
+    cursor: pointer;
+}
+
+.iconDiscord:hover {
+    background-color: #D9D9D9;
 }
 
 .iconExchangeArt {
@@ -39,6 +49,11 @@
     border-right-width: 5px;
     padding: 3px;
     background-color: #FBBF31;
+    cursor: pointer;
+}
+
+.iconExchangeArt:hover {
+    background-color: #D9D9D9;
 }
 
 .iconAtlas {
@@ -48,6 +63,11 @@
     border-right-width: 5px;
     padding: 3px;
     background-color: #FBBF31;
+    cursor: pointer;
+}
+
+.iconAtlas:hover {
+    background-color: #D9D9D9;
 }
 
 .links {
@@ -62,7 +82,7 @@
 }
 
 .links a:hover {
-    text-decoration: underline;
+    color: #D9D9D9;
 }
 
 .copyright {
