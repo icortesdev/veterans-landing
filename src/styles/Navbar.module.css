@@ -11,13 +11,14 @@
     padding-bottom: 20px;
     font-family: 'MonumentExtended', sans-serif;
     font-weight: 800;
-    border-bottom-width: 2px;
+    border-bottom-width: 4px;
     border-color: black;
     border-style: solid;
+    margin-top: 1%;
 }
 
 .logo {
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: bold;
 }
 
@@ -100,6 +101,14 @@
     display: flex;
 }
 
+.menuButton {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
 .button {
     background-color: white;
     color: black;
@@ -115,4 +124,154 @@
 .button:hover {
     background-color: #D9D9D9;
     color: black;
+}
+
+@media (max-width: 320px) {
+    .navbar {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items: baseline;
+        margin-top: 3%;
+    }
+
+    .logo {
+        margin-top: 2%;
+        height: 18px;
+        margin-left: -6%;
+    }
+
+    .navLinks {
+        font-size: smaller;
+        margin-left: 2%;
+
+    }
+
+    .navItem {
+        font-size: 12px;
+    }
+
+    .label {
+        font-size: 14px;
+    }
+
+    .button {
+        display: block;
+        padding: 5px;
+        text-decoration: none;
+        color: black;
+        width: 50%;
+        text-align: center;
+        font-size: 12px;
+        height: auto;
+        margin-top: 1%;
+    }
+
+    .menuButton {
+        display: block;
+        margin-left: 50%;
+        background-color: #c1c0c0;
+        border-top: 2px solid black;
+        border-left: 2px solid black;
+        border-bottom: 5px solid black;
+        border-right: 5px solid black;
+        padding: 0px 4px;
+        cursor: pointer;
+    }
+
+    .actionButtons {
+        display: none;
+        position: absolute;
+        top: 10%;
+        left: 45%;
+        background: #ffffff00;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        width: 100%;
+    }
+
+    .show {
+        display: block;
+    }
+
+    .disabled {
+        pointer-events: none;
+        opacity: 0.8;
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        align-items: baseline;
+        margin-top: 3%;
+    }
+
+    .logo {
+        margin-top: 2%;
+        height: 18px;
+        margin-left: -6%;
+    }
+
+    .navLinks {
+        font-size: smaller;
+        margin-left: 2%;
+
+    }
+
+    .navItem {
+        font-size: 12px;
+    }
+
+    .label {
+        font-size: 14px;
+    }
+
+    .button {
+        display: block;
+        padding: 5px;
+        text-decoration: none;
+        color: black;
+        width: 50%;
+        text-align: center;
+        font-size: 12px;
+        height: auto;
+        margin-top: 1%;
+    }
+
+    .menuButton {
+        display: block;
+        margin-left: 50%;
+        background-color: #c1c0c0;
+        border-top: 2px solid black;
+        border-left: 2px solid black;
+        border-bottom: 5px solid black;
+        border-right: 5px solid black;
+        padding: 0px 4px;
+        cursor: pointer;
+    }
+
+    .actionButtons {
+        display: none;
+        position: absolute;
+        top: 10%;
+        left: 45%;
+        background: #ffffff00;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        width: 100%;
+    }
+
+    .show {
+        display: block;
+    }
+
+    .disabled {
+        pointer-events: none;
+        opacity: 0.8;
+    }
 }
