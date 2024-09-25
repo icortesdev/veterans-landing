@@ -28,3 +28,9 @@ body {
   background-color: #FBBF31;
   font-family: "public/fonts/MonumentExtended-Regular.otf";
 }
+
+.headerImage{
+  margin-left: 28%;
+  margin-top: 1%;
+  border: 3px solid black;
+}

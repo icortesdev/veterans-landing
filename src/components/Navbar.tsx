@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styles from '../styles/Navbar.module.css';
 import Link from 'next/link';
 import Image from 'next/image';
-import Actions from './Actions';
+import Actions from '../Actions/Actions';
 
 interface ActionButtonProps {
     url: string;
@@ -12,7 +12,7 @@ interface ActionButtonProps {
 
 const Navbar = () => {
 
-    const [isMenuOpen, setisMenuOpen] = useState(false)
+    
     return (
         <nav className={styles.navbar}>
             <Logo />
@@ -27,7 +27,7 @@ const Logo = () => (
         <Link href="/">
             <Image
                 src="/images/Isotipo_Negro.svg"
-                alt="logo"
+                alt="logoVeterans"
                 width={37}
                 height={31}
                 priority

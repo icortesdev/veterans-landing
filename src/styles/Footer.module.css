@@ -8,7 +8,7 @@
 .icons {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 25px;
     margin-bottom: 10px;
 
 }
@@ -99,4 +99,13 @@
 .logo {
     margin-left: 50%;
     margin-bottom: 1%;
+}
+
+@media (min-width: 600px) and (max-width: 1024px) {
+    .vector9 {
+        margin-top: 12px;
+        position: absolute;
+        z-index: -1;
+        height: 0.5%;
+    }
 }
